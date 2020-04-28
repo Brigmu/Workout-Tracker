@@ -1,20 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
-// const mongojs = require('mongojs');
-
-// const databaseUrl = "workout";
-// const collections = ["workous"];
-
-// const db = require('./models');
-
-// db.Workout.findOne({})
-// .then(result => {
-//     console.log(result);
-// })
 
 const PORT = process.env.PORT || 3000;
 
-// const User = require("./userModel.js");
 const app = express();
 
 

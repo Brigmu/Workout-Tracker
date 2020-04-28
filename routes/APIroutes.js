@@ -10,17 +10,13 @@ module.exports = function(app) {
     });
 
     app.post('/api/workouts', (req, res) => {
-        console.log(req.body);
         Workout.create(req.body, (err, results) =>{
             if(err) console.log(err);
             res.json(results);
-            console.log(results);
         });
     });
 
     app.put('/api/workouts/:id', (req, res) => {
-        console.log(req.body);
-        console.log(req.params.id);
         Workout.updateOne({
             _id: req.params.id
         },
@@ -34,7 +30,6 @@ module.exports = function(app) {
         }, (err, results) => {
             if(err) console.log(err);
             res.json(results);
-            console.log(results);
         });
     });
 
@@ -42,7 +37,6 @@ module.exports = function(app) {
         Workout.find({},  (err, results) => {
             if(err) console.log(err);
             res.json(results);
-            console.log(results);
         });
     });
 }
